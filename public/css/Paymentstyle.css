@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+.payment{
+  background: url("img/bg.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper{
+  position: relative;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  height: 350px;
+}
+
+.checkout_wrapper{
+  width: 750px;
+  height: 400px;
+  display: flex;
+  position: absolute;
+}
+
+.checkout_wrapper .plan_info{
+  width: 40%;
+  background: -webkit-gradient(linear, left top, right top, from(#eb3c5a), to(#f67831));
+  background: -o-linear-gradient(bottom, #eb3c5a, #f67831);
+  background: linear-gradient(to top, #eb3c5a, #f67831);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+}
+
+.checkout_wrapper .plan_info h1{
+  font-size: 95px;
+  font-weight: bold;
+  margin: 20px;
+  color: #cc2333;
+}
+
+.checkout_wrapper .checkout_form{
+  width: 55%;
+  background: #fff;
+  padding: 50px 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.checkout_wrapper .plan_info .content{
+  text-align: center;
+  margin-top: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.checkout_wrapper .plan_info .content h3{
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 3px;
+}
+
+.checkout_wrapper .plan_info .content p{
+  margin-top: 10px;
+  font-size:14px;
+  color: #330dbf;
+}
+
+.checkout_form p{
+  margin-bottom: 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.checkout_form .details .section{
+  margin-bottom: 15px;
+}
+
+.checkout_form .details .section input[type="text"]{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #dddddd;
+}
+.checkout_form .details .section input[type="number"]{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #dddddd;
+}
+.checkout_form .details .section input[type="month"]{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #dddddd;
+}
+.checkout_form .details .section input[type="text"]:focus{
+  border: 2px solid #e85c4d;
+}
+.checkout_form .details .section input[type="number"]:focus{
+  border: 2px solid #e85c4d;
+}
+.checkout_form .details .section input[type="month"]:focus{
+  border: 2px solid #e85c4d;
+}
+.checkout_form .details .section.last_section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout_form .details .section.last_section .item{
+  width: 48%;
+}
+
+.checkout_form .details .btn{
+  background: #e85c4d;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.checkout_form .details .btn button{
+  background: #e85c4d;
+  color: #fff;
+  letter-spacing: 3px;
+  display: block;
+  border: 0px;
+  cursor: pointer;
+  text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ margin: 0;
+}
+/* Firefox */
+input[type=number] {
+ -moz-appearance:textfield;
+}
+input[type=month] {
+ -moz-appearance:textfield;
+}
