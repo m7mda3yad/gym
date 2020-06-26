@@ -40,4 +40,4 @@ Route::post('/Login', 'general\LoginController@login')->name('Login');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('auth.logout.post');
   
-Auth::routes();
+Auth::routes(['verify'=>true]);

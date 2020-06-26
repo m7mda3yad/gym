@@ -1,6 +1,7 @@
 @extends('site.index')
 @section('content')
-<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/classes-breadcrumb.jpg">
+<section class="breadcrumb-section set-bg" style="background-image:url('asset/img/breadcrumb/classes-breadcrumb.jpg')"
+         data-setbg="{{asset('asset/img/breadcrumb/classes-breadcrumb.jpg')}}">
 <div class="container"><div class="row"><div class="col-lg-12"><div class="breadcrumb-text">
                     <h2>Contact</h2>
 <div class="breadcrumb-option">

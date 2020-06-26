@@ -30,9 +30,11 @@ class PaymentProviderController extends Controller
                     $plan = new App\Plan();
                     $id = $request->input('id') ;          
             $td = $request->input('trainer_id') ;          
-              $plan = $plan->find($id)->first();
+              $plan = $plan->find($id);
+              if($plan)
             return view('member.payment')->withPlan($plan)->withTd($td);
-        }
+    else return redirect ()->back ();
+              }
 
         
         }

@@ -1,60 +1,6 @@
-<html>
-<head>
-    <meta charset="UTF-8"><link rel="icon" type="image/png" href="img/logo.png"/> <meta name="keywords" content="Gutim, unica, creative, html">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                                                    <title>TIMGYM</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"rel="stylesheet">    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    <script src='https://kit.fontawesome.com/a076d05399.js'></script>    <link rel="stylesheet" type="text/css" href="font-awesome.min.css">    <link rel="stylesheet" type="text/css" href="material-design-iconic-font.min.css">    <link rel="stylesheet" type="text/css" href="animate.css">    <link rel="stylesheet" type="text/css" href="hamburgers.min.css">    <link rel="stylesheet" type="text/css" href="animsition.min.css">    <link rel="stylesheet" type="text/css" href="select2.min.css">    <link rel="stylesheet" type="text/css" href="daterangepicker.css">    <link rel="stylesheet" type="text/css" href="util.css">    <link rel="stylesheet" type="text/css" href="main.css">    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">    <link rel="stylesheet" href="css/style.css" type="text/css">    <link rel="stylesheet" href="css/font-awesome.min.css"> 
-<style>
-    .navbar {
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-}
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.feedbackform {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-.
-</style>
-</head>
-<body>
-    <div class="navbar">
-<header style="background-color:black" class="header-section ">
-<div class="container"><div class="nav-menu">  <nav class="mainmenu mobile-menu">
-<div id="tabs">
-<div class='log'></div>
-    <ul>
-        <li><a href="#profile1">{{Auth::guard('member')->user()->name}}</a></li>
-        <li><a href="#feedback">Feedback</a></li>
-        <li><a href="#plan">Plan</a></li>
-        <li><a href="#trainer">Trainer</a></li>
-        <li><a href="home">home</a></li>
-    </ul>
-    </div>
-</div></div></header></div><div id="profile1" class="filterDiv profile1"><br>
+@extends('member.uindex')
+@sectiion('content')
+    <div id="profile1" class="filterDiv profile1"><br>
   <header id="main-header" class="py-2 bg-primary text-white">
     <div class="container"><div class="row"><div class="col-md-6">
               <h1><i class="fa fa-user"></i> Edit Profile</h1>
@@ -86,7 +32,7 @@ input[type=submit]:hover {
 </div></div></div>
             <div class="col-md-3">
                                 <h3>My Profile</h3>
-                                <img src="img/profile/{{Auth::guard('member')->user()->image}}" alt="" class="d-block img-fluid mb-3">
+                                <img src="asset/img/profile/{{Auth::guard('member')->user()->image}}" alt="" class="d-block img-fluid mb-3">
                                 <section id="actions" class="py-4 mb-4 bg-light">
   <div class=""><div class="col-md-9">
   <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#image"><i class="fa fa-plus"></i> Edit image</a>
@@ -107,11 +53,12 @@ $t=Auth::guard('member')->user()->find(Auth::guard('member')->user()->trainer_id
 echo '<input type="hidden" name="trainer_id"value="'.$t->id.'">';
 echo '<h4 >Your Trainer </h4>';
 echo '<h3 style="color : green"> '. $t->full_name.'</h3>';
-echo ' massage<input type="text" name="body">';
+echo ' massage<input type="text" name="massage">';
 }
 }
 else echo'  <label for="exampleFormControlTextarea1">Your Message To In  Gym</label>
-                       <textarea class="form-control"name="massage" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                       <textarea class="form-control"name="massage" id="exampleFormControlTextarea1" 
+                       rows="3" required></textarea>
                         <input type="hidden" name="statu" value="0">';?>
 </div>
                         <input type="submit" value="Send">
@@ -137,18 +84,18 @@ else echo'  <label for="exampleFormControlTextarea1">Your Message To In  Gym</la
                            echo "<h2 class='mi-price'>".$s->count()."</h2>";?>                              
                      <select name="trainer_id"  required>
                            @if($s->count()>0)
-                            @foreach($s as $data){
+                            @foreach($s as $dat){
                               @if($data->shift==1)
-                            <option  value="{{$data->id}}">{{$data->full_name}} shift = Morning </option>
+                            <option  value="{{$dat->id}}">{{$dat->full_name}} shift = Morning </option>
                             @else
-                            <option  value="{{$data->id}}">{{$data->full_name}}  shift = Night </option>
+                            <option  value="{{$dat->id}}">{{$dat->full_name}}  shift = Night </option>
                            @endif
                            @endforeach
                             @endif
                     </select>
              </li>
                   <li>
-                                <input type='hidden' name='id' value="{{$data->id}}">
+                                <input type='hidden' name="id" value="{{$data->id}}">
                       @if($data->id==Auth::guard('member')->user()->plan_id)
                                 <div class="danger">My Plan</div>
                        @else
@@ -176,16 +123,16 @@ else echo'  <label for="exampleFormControlTextarea1">Your Message To In  Gym</la
 @foreach($t as $data)
 <div class="col-lg-4 col-md-6">
 <div class="single-trainer-item">
-    <img src="img/profile/{{$data->image}}" alt="">
+    <img src="asset/img/profile/{{$data->image}}" alt="">
 <div class="trainer-text">
                             <h5>{{$data->full_name}}</h5>
 <?php
                             $s=new App\Plan();
-                            $s=$s->where('id',$data->id)->get();foreach($s as $ss){
+                            $s=$s->where('id',$data->plan_id)->get();foreach($s as $ss){
                             if(($ss->name))echo "<span>".$ss->name."</span>";                             
 }
                             ?>      
-                            <p>there are occasions when the times of the fall of that sort, you should work to seek pleasure and pain, some great.</p>
+ <p>there are occasions when the times of the fall of that sort, you should work to seek pleasure and pain, some great.</p>
 <div class="trainer-social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
@@ -228,48 +175,5 @@ else echo'  <label for="exampleFormControlTextarea1">Your Message To In  Gym</la
            <div class="modal-footer"><button class="btn btn-secondary"  data-dismiss="modal">Close</button>
                <button class="btn btn-primary"  type="submit" data-dismiss="modal">Update Password</button></div>
 </div> </form></div></div></div>
-<script>
-$(window).scroll(function() {
-    var height = $(window).scrollTop();
-    if (height > 300) {
-        $('#btnScrollToTop').fadeIn("slow");
-    } else {
-        $('#btnScrollToTop').fadeOut("slow");
-    }
-});
-$(document).ready(function() {
-    $("#btnScrollToTop").click(function(event) {
-        event.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, "smooth");
-        return false;
-    });
 
-});
-
-$(document).ready(function(){
-// Add smooth scrolling to all links
-$("a").on('click', function(event) {
-
-// Make sure this.hash has a value before overriding default behavior
-if (this.hash !== "") {
-  // Prevent default anchor click behavior
-  event.preventDefault();
-
-  // Store hash
-  var hash = this.hash;
-
-  // Using jQuery's animate() method to add smooth page scroll
-  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 800, function(){
-
-    // Add hash (#) to URL when done scrolling (default click behavior)
-    window.location.hash = hash;
-  });
-} // End if
-});
-});
-</script>
-</body>
-</html>
+@endsectiion

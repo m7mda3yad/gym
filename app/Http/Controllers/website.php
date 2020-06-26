@@ -26,14 +26,10 @@ class website extends Controller
      }
      public  function contact2(Request $request)
      {       
-         if($request->isMethod('post')){
-                $request->validate([
-             'email' => 'required|email|max:100|min:5',
-             'massage' => 'required',
-         ]);
-\Illuminate\Support\Facades\DB::insert("insert into massage(body,email)value(?,?)",[$request->input('massage'),$request->input('email')]);                        
-                }    
-         return view ('site.contact');   
+         if($request->input('massage')!=null&&$request->input('email')!=null)
+\Illuminate\Support\Facades\DB::insert("insert into massage(body,email)value(?,?)",
+        [$request->input('massage'),$request->input('email')]);                        
+         return redirect()->back();   
      }
      public  function update_site(Request $request) {
 $x = new mange();
@@ -63,15 +59,18 @@ return redirect('site_data');}
        {
             $d = new App\Web_data();
             $d=$d->find(1);
-    return view ('site.admin.web_data')->withD($d);   
+    return view ('admin.web_data')->withD($d);   
                 }
 
                 public function feedback(Request $request)
                         {
-        if($request->input('statu')==1) 
+if($request->input('statu')==1 && $request->input('massage')!=null && $request->input('trainer')!=null)
+
 \Illuminate\Support\Facades\DB::insert("insert into feedback(body,member_id,trainer_id)value(?,?,?)",[$request->input('massage'),Auth::guard('trainer')->user()->id,trainer_id]);
 else 
-\Illuminate\Support\Facades\DB::insert("insert into massage(body,email)value(?,?)",[$request->input('massage'),Auth::guard('member')->user()->email]);                        
+if($request->input('massage')!=null && $request->input('trainer')!=null)
+\Illuminate\Support\Facades\DB::insert("insert into massage(body,email)value(?,?)"
+,[$request->input('massage'),Auth::guard('member')->user()->email]);                        
 return redirect()->back();
 
                         }

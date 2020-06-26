@@ -3,17 +3,17 @@
  	<title>Gutim | register</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon"      type="image/png" href="{{asset('img/logo.png')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/material-design-iconic-font.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/hamburgers.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/animsition.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/select2.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/daterangepicker.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+	<link rel="icon"      type="image/png" href="{{asset('asset/img/logo.png')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/material-design-iconic-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/hamburgers.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/daterangepicker.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('asset/css/util.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('asset/css/main.css')}}">
 </head>
 <body>
 <div class="limiter"><div class="container-login100"><div class="wrap-login100">
@@ -66,15 +66,15 @@
 </form>
 </div></div></div>
 <div> 
-    <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
-	<script src="{{asset('js/animsition.min.js')}}"></script>
-	<script src="{{asset('js/popper.js')}}"></script>
-	<script src="{{asset('js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('js/select2.min.js')}}"></script>
-	<script src="{{asset('js/moment.min.js')}}"></script>
-	<script src="{{asset('js/daterangepicker.js')}}"></script>
-	<script src="{{asset('js/countdowntime.js')}}"></script>
-	<script src="{{asset('js/main.js')}}"></script>
+        <script src="{{asset('asset/js/jquery-3.2.1.min.js')}}"></script>
+	<script src="{{asset('asset/js/animsition.min.js')}}"></script>
+	<script src="{{asset('asset/js/popper.js')}}"></script>
+	<script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('asset/js/select2.min.js')}}"></script>
+	<script src="{{asset('asset/js/moment.min.js')}}"></script>
+	<script src="{{asset('asset/js/daterangepicker.js')}}"></script>
+	<script src="{{asset('asset/js/countdowntime.js')}}"></script>
+	<script src="{{asset('asset/js/main.js')}}"></script>
 </div>
     </body>
 </html>

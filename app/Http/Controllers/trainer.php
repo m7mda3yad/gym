@@ -17,7 +17,7 @@ class trainer extends Controller {
                  $m=new \App\Trainer();
                      $image_name=$_FILES['image']['name'];$image_tmp_name=$_FILES['image']['tmp_name'];
                      $name= rand(0,1000000).'_'.$image_name;
-                     move_uploaded_file($image_tmp_name,'C:\xampp\htdocs\gym\public\img\profile\\'.$name );
+                     move_uploaded_file($image_tmp_name,'C:\xampp\htdocs\gym\asset\img\profile\\'.$name );
                      $this->delete_image();
                     $m->where('id',Auth::guard('trainer')->user()->id)->update(['image'=>  $name]);
             return redirect('trainer');
@@ -50,7 +50,7 @@ class trainer extends Controller {
                     foreach ($image as $image){}
                     $image = $image->image;
                     if($image&&$image!="image.png"){      
-                    $filePath = 'C:\xampp\htdocs\gym\public\img\profile\\'.$image;
+                    $filePath = 'C:\xampp\htdocs\gym\asset\img\profile\\'.$image;
                     if (file_exists($filePath)) 
                      unlink($filePath);
        }}

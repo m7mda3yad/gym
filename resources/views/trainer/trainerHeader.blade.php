@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+ <html>
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="./img/logo.png"/>
@@ -12,13 +11,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/Paymentstyle.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css"      type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css"   type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css"     type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css"       type="text/css">
-    <link rel="stylesheet" href="css/style.css"              type="text/css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('asset/css/Paymentstyle.css')}}">
+    <link rel="stylesheet" href="{{asset('asset/css/bootstrap.min.css')}}"      type="text/css">
+    <link rel="stylesheet" href="{{asset('asset/css/owl.carousel.min.css')}}"   type="text/css">
+    <link rel="stylesheet" href="{{asset('asset/css/magnific-popup.css')}}"     type="text/css">
+    <link rel="stylesheet" href="{{asset('asset/css/slicknav.min.css')}}"       type="text/css">
+    <link rel="stylesheet" href="{{asset('asset/css/style.css')}}"            type="text/css">
+    <link rel="stylesheet" href="{{asset('asset/css/font-awesome.min.css')}}" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <style>
       .website_checklist ul {
@@ -119,10 +118,10 @@
 <body>
 <header >
 <div><div class="nav-menu" style="background-color: black;width: 100%;margin: 0px;padding: 0px "><div class="logo">
-                    <a href="home"><img src="./img/TIMGYM2.png" style="width: 210px;height: 79px;margin: -21px;" alt="TIM GYM"></a>
+                    <a href="home"><img src="{{asset('asset/img/TIMGYM2.png')}}" style="width: 210px;height: 79px;margin: -21px;" alt="TIM GYM"></a>
 </div><nav class="mainmenu mobile-menu" style="float: right">
             <ul>
-                                       <li><a href="take_attendance">Attendance</a></li>
+                     <li><a href="take_attendance">Attendance</a></li>
                                <li><a href="trainer"><i class="fa fa-user"></i> Welcome .....</a></li>
                         <li class="nav-item"><a href="logout" class="nav-link"><i class="fa fa-user-times"></i> Logout</a>
             </ul>

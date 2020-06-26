@@ -4,7 +4,6 @@ return [
  
 
     'default' => env('MAIL_MAILER', 'smtp'),
-
     'mailers' => [
             'transport' => 'smtp',
             'host' => env('MAIL_HOST', 'smtp.gmail.com'),

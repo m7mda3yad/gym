@@ -1,7 +1,12 @@
 @extends('admin.aindex')
 @section('content')
-        <form method="post" action="update_site">
-                                            @csrf          
+
+<header id="main-header" class=" bg-primary text-white">
+<div class="container">      <div class="row">       <div class="col-md-6">
+<br>
+<br>
+<form method="post" action="update_site">
+          @csrf          
                                 <label>Site Name</label><br>
     <input type="text" name="site_name"    value="{{$d->site_name}}"      class="input100"><br>
             <label>Facebook link</label>            <br>
@@ -18,4 +23,10 @@
     <input  type="text" name="email"        value="{{$d->email}}"       class="input100"><br>
     <input  type="submit" name="site_data"  value="Update"      class="btn-lg"><br>
           </form>
-@endsection
+
+            </div></div></div>
+
+            </header>
+
+    
+    @endsection

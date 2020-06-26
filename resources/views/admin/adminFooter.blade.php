@@ -34,15 +34,15 @@
 <button id="btnScrollToTop">
   <i class="fa fa-chevron-up" style="font-size:24px"></i>
 </button>
-  <script src=" js/jquery-3.4.1.min.js"></script>
-  <script src=" js/bootstrap.min.js"></script>
-  <script src=" js/jquery.magnific-popup.min.js"></script>
-  <script src=" js/mixitup.min.js"></script>
-  <script src=" js/jquery.slicknav.js"></script>
-  <script src=" js/owl.carousel.min.js"></script>
-  <script src=" js/main.js"></script>
-  <script src=" js/jquery.min.js" charset="utf-8"></script>
-  <script src=" js/popper.min.js" charset="utf-8"></script>
-  <script src=" js/bootstrap.min.js" charset="utf-8"></script>
+  <script src=" {{asset('asset/js/jquery-3.4.1.min.js')}}"></script>
+  <script src=" {{asset('asset/js/bootstrap.min.js')}}"></script>
+  <script src=" {{asset('asset/js/jquery.magnific-popup.min.js')}}"></script>
+  <script src=" {{asset('asset/js/mixitup.min.js')}}"></script>
+  <script src=" {{asset('asset/js/jquery.slicknav.js')}}"></script>
+  <script src=" {{asset('asset/js/owl.carousel.min.js')}}"></script>
+  <script src=" {{asset('asset/js/main.js')}}"></script>
+  <script src=" {{asset('asset/js/jquery.min.js')}}" charset="utf-8"></script>
+  <script src=" {{asset('asset/js/popper.min.js')}}" charset="utf-8"></script>
+  <script src=" {{asset('asset/js/bootstrap.min.js')}}" charset="utf-8"></script>
 </body>
 </html>

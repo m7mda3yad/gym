@@ -23,7 +23,9 @@
 </div></div></div>
   </section>
   <secion id="profile">
-<div class="container"><div class="row"><div class="col-md-9"><div class="card"><div class="card-header">
+<div class="container">
+    
+    <div class="row"><div class="col-md-9"><div class="card"><div class="card-header">
                 <h4>Edit Profile</h4>
 </div><div class="card-body">
                                     <form method="post" action="trainer/update">
@@ -69,7 +71,7 @@
 
             <div class="col-md-3">
                                 <h3>My Image</h3><br>
-            <img src="img/profile/{{Auth::guard('trainer')->user()->image}}" alt="" class="d-block img-fluid mb-3">
+            <img src="asset/img/profile/{{Auth::guard('trainer')->user()->image}}" alt="" class="d-block img-fluid mb-3">
             <section id="actions" class="py-4 mb-4 bg-light">
   <div class=""><div class="col-md-9">
   <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#image"><i class="fa fa-plus"></i> Edit image</a>
@@ -87,11 +89,13 @@
   @csrf
 <div class="form-group">
     <lable> Image </lable>
+                       
     <input type="file" class="form-control" required name="image">
 </div><div class="modal-footer">    
         <button type="submit" class="btn btn-primary" >Update Image</button>
         <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-</div></form></div></div></div></div><br>
+</div></form>
+</div></div></div></div><br>
 
 <div class="modal fade" id="passwordModal"><div class="modal-dialog modal-lg"><div class="modal-content">
 <div class="modal-header bg-primary text-white">
